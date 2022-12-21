@@ -18,7 +18,8 @@ import Footer from './components/Footer';
 const App = () => {
   return (
     // This box will contain the Navbar and the Routes between pages
-    <Box width='400px'>
+    // material ui lets us use the box, set the width then set a responsive width and a margin inline
+    <Box width='400px' sx={{ width: { xl: '1488px'}}} m='auto'>
       <Navbar /> 
       <Routes>
         <Route path='/' element={<Home />}/>
