@@ -10,7 +10,8 @@ const App = () => {
     <Box width='400px'>
       Navbar 
       <Routes>
-        <Route></Route>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/exercise/:id' element={<Home/>}/>
       </Routes>
     </Box>
   )
