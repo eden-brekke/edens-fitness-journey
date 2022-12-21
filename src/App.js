@@ -8,7 +8,10 @@ import './App.css';
 const App = () => {
   return (
     <Box width='400px'>
-      App
+      Navbar 
+      <Routes>
+        <Route></Route>
+      </Routes>
     </Box>
   )
 }
