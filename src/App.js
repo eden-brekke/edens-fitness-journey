@@ -8,10 +8,10 @@ import './App.css';
 const App = () => {
   return (
     <Box width='400px'>
-      Navbar 
+      <Navbar /> 
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/exercise/:id' element={<Home/>}/>
+        <Route path='/' element={<Home />}/>
+        <Route path='/exercise/:id' element={<ExerciseDetail />}/>
       </Routes>
     </Box>
   )
