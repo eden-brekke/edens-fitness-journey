@@ -16,8 +16,10 @@ const Navbar = () => {
         mt: { sm: '32px', xs: '20px' },
         justifyContent: 'none'
       }}
-      px='20px' >
-      <Link to="/" >
+      px='20px'
+    >
+      <Link to="/"
+      >
         <img
           src={Logo}
           alt='logo'
@@ -25,7 +27,8 @@ const Navbar = () => {
             width: '48px',
             height: '48px',
             margin: '0 20px'
-          }} />
+          }}
+        />
       </Link>
       <Stack
         direction='row'
@@ -39,7 +42,8 @@ const Navbar = () => {
             textDecoration: 'none',
             color: "#3A1212",
             borderBottom: '3px solid #FF2625'
-          }} >
+          }}
+        >
           Home
         </Link>
         <a
@@ -47,7 +51,8 @@ const Navbar = () => {
           style={{
             textDecoration: 'none',
             color: '#3A1212'
-          }}>
+          }}
+        >
           Exercises
         </a>
       </Stack>
