@@ -17,11 +17,13 @@ const HeroBanner = () => {
         }
       }}
       position='relative'
-      p='20px'>
+      p='20px'
+    >
       <Typography
         color='#FF2625'
         fontWeight='600'
-        fontSize='26px'>
+        fontSize='26px'
+      >
         Fitness Club
       </Typography>
       <Typography
@@ -33,13 +35,15 @@ const HeroBanner = () => {
           }
         }}
         mb='23px'
-        mt='30px'>
+        mt='30px'
+      >
         Sweat, Smile <br /> and Repeat
       </Typography>
       <Typography
         fontSize='22px'
         lineHeight='35px'
-        mb={4}>
+        mb={4}
+      >
         Check out the most effective exercises!
       </Typography>
       <Button
@@ -49,7 +53,8 @@ const HeroBanner = () => {
         sx={{
           backgroundColor: '#FF2625',
           padding: '10px'
-        }}>
+        }}
+      >
         Explore Exercises
       </Button>
       <Typography
@@ -59,13 +64,15 @@ const HeroBanner = () => {
           opacity: '0.1',
           display: { lg: 'block', xs: 'none' }
         }}
-        fontSize='200px'>
+        fontSize='200px'
+      >
         Exercise
       </Typography>
       <img
         src={HeroBannerImage}
         alt='banner'
-        className='hero-banner-img' />
+        className='hero-banner-img'
+      />
     </Box>
   )
 }
