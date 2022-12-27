@@ -11,47 +11,45 @@ const ExerciseCard = ({ exercise }) => {
       <img
         src={exercise.gifUrl}
         alt={exercise.name}
-        Loading='lazy'
+        loading='lazy'
       />
-      <Stack
-        direction='row'
-      >
+      <Stack direction='row'>
         <Button
-        sx={{
-          ml:'21px',
-          color: '#fff',
-          background: '#ffa9a9',
-          fontSize: '14px',
-          borderRadius: '20px',
-          textTransform: 'capitalize'
-        }}
+          sx={{
+            ml: '21px',
+            color: '#fff',
+            background: '#ffa9a9',
+            fontSize: '14px',
+            borderRadius: '20px',
+            textTransform: 'capitalize'
+          }}
         >
           {exercise.bodyPart}
         </Button>
         <Button
-        sx={{
-          ml:'21px',
-          color: '#fff',
-          background: '#fcc757',
-          fontSize: '14px',
-          borderRadius: '20px',
-          textTransform: 'capitalize'
-        }}
+          sx={{
+            ml: '21px',
+            color: '#fff',
+            background: '#fcc757',
+            fontSize: '14px',
+            borderRadius: '20px',
+            textTransform: 'capitalize'
+          }}
         >
-          {exercise.targetMuscle}
+          {exercise.target}
         </Button>
-        <Typography
-          ml='21px'
-          color='#000'
-          fontWeight='bold'
-          mt='11px'
-          pb='10px'
-          textTransform='capitalize'
-          fontSize='22px'
-        >
-          {exercise.name}
-        </Typography>
       </Stack>
+      <Typography
+        ml='21px'
+        color='#000'
+        fontWeight='bold'
+        mt='11px'
+        pb='10px'
+        textTransform='capitalize'
+        fontSize='22px'
+      >
+        {exercise.name}
+      </Typography>
     </Link>
   )
 }
