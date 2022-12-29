@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'; // determine id that the exercise is so we can render additional data
 import { Box } from '@mui/material';
 
-import { exerciseOptions, fetchData} from '../utils/fetchData';
+import { exerciseOptions, youtubeOptions, fetchData} from '../utils/fetchData';
 import Detail from '../components/Detail';
 import ExerciseVideos from '../components/ExerciseVideos';
 import SimilarExercises from '../components/SimilarExercises';
@@ -11,6 +11,7 @@ import SimilarExercises from '../components/SimilarExercises';
 
 const ExerciseDetail = () => {
   const [exerciseDetail, setExerciseDetail] = useState({});
+  const [exerciseVideos, setExerciseVideos] = useState([])
   const { id } = useParams(); // give access to number thats in the url
 
   useEffect(() => {
@@ -20,6 +21,10 @@ const ExerciseDetail = () => {
       
       const exerciseDetailData = await fetchData(`${exerciseDbUrl}/exercises/exercise/${id}`, exerciseOptions);
       setExerciseDetail(exerciseDetailData);
+
+
+      const exerciseVideosData = await fetchData(`${youtubeSearchUrl}/search?q=${exerciseDetailData.name}`, youtubeOptions);
+      setExerciseVideos(exerciseVideosData);
     }
     fetchExercisesData();
   }, [id]);
@@ -27,7 +32,7 @@ const ExerciseDetail = () => {
   return (
     <Box>
       <Detail exerciseDetail={exerciseDetail} />
-      <ExerciseVideos />
+      <ExerciseVideos exerciseVideos={exerciseVideos} />
       <SimilarExercises />
     </Box>
   )
