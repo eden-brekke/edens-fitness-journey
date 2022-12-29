@@ -2,7 +2,7 @@ import React from 'react';
 // Typography is like a p tag in material UI
 import { Box, Stack, Typography, Button } from '@mui/material';
 
-import HeroBannerImage from '../assets/images/banner.png'
+import HeroBannerImage from '../assets/images/banner.jpg'
 
 const HeroBanner = () => {
   return (
