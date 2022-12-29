@@ -63,7 +63,7 @@ const Detail = ({ exerciseDetail }) => {
           >
             <Button
               sx= {{
-                background: '$fff2db',
+                background: '#fff2db',
                 borderRadius: '50%',
                 width: '100px',
                 height: '100px',
