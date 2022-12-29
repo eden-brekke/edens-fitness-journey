@@ -10,7 +10,7 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
       sx={{
         mt: {
           lg: '100px',
-          xs: '0'
+          xs: '0px'
         }
       }}
     >
